@@ -15,7 +15,7 @@
         "quay.io/biocontainers/scanpy:1.7.2--pyhdfd78af_0",
         "quay.io/biocontainers/simpleaf:0.10.0--h9f5acd7_1",
         "quay.io/biocontainers/star:2.7.10b--h9ee0642_0",
-        "satijalab/seurat:4.3.0",
+#        "satijalab/seurat:4.3.0",
         "ubuntu:20.04"
     ]
 }
