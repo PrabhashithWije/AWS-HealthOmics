@@ -325,6 +325,7 @@ Resources:
                         "arn:${AWS::Partition}:s3:::${AWS::StackName}*"
                       ],
                 			"Action": [
+                        "s3:PutObject",
                 				"s3:ListBucket",
                 				"s3:GetObject"
                 			]
@@ -336,9 +337,28 @@ Resources:
                 			],
                 			"Action": [
                 				"sns:Publish",
-                				"sns:Subscribe"
+                				"sns:Subscribe",
+                        "sns:Unsubscribe"
                 			]
                 		},
+                    {
+                        "Effect": "Allow",
+                        "Action": [
+                            "logs:CreateLogGroup",
+                            "logs:CreateLogStream",
+                            "logs:PutLogEvents"
+                        ],
+                        "Resource": "arn:${AWS::Partition}:logs:*:*:*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": [
+                            "cloudformation:DescribeStacks",
+                            "cloudformation:DescribeStackResources",
+                            "cloudformation:SignalResource"
+                        ],
+                        "Resource": "arn:${AWS::Partition}:cloudformation:*:*:${AWS::StackName}*"
+                    },                    
                 		{
                 			"Effect": "Allow",
                 			"Action": [
