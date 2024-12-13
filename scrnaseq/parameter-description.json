@@ -5,7 +5,7 @@
                 "optional": false},
     "aligner": {"description": "choice of aligner: alevin, star, kallisto",
             "optional": false},
-    "whitelist": {"description": "Optional whitelist if 10X protocol is not used.",
+    "whitelist": {"description": "Optional whitelist if the 10X protocol is not used.",
             "optional": true},
     "gtf": {"description": "S3 path to the GTF file",
             "optional": false},
