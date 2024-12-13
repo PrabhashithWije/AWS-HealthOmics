@@ -7,7 +7,7 @@
             "optional": false},
     "whitelist": {"description": "Optional whitelist if 10X protocol is not used.",
             "optional": true},
-    "gtf": {"description": "S3 path to GTF file",
+    "gtf": {"description": "S3 path to the GTF file",
             "optional": false},
     "fasta": {"description": "S3 path to the FASTA file",
             "optional": false}

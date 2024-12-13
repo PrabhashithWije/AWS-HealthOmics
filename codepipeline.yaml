@@ -778,7 +778,7 @@ Resources:
                             fi
                           - aws s3 cp ../workflow.zip ${WORKFLOW_S3_FILE_PATH}
                           - echo "aws omics create-workflow --engine WDL --definition-uri ${WORKFLOW_S3_FILE_PATH} --name ${WORKFLOW_NAME} --parameter-template file://${WORKFLOW_FOLDER_PATH}/${WorkflowParameterFileName}.json"
-                          - aws omics create-workflow --engine WDL --definition-uri ${WORKFLOW_S3_FILE_PATH} --name ${WORKFLOW_NAME} --parameter-template file://${WorkflowParameterFileName}.json
+                          - aws omics create-workflow --engine WDL --definition-uri ${WORKFLOW_S3_FILE_PATH} --name ${WORKFLOW_NAME} --parameter-template file://${WORKFLOW_FOLDER_PATH}/${WorkflowParameterFileName}.json
                     artifacts:
                       files:
                         - ../workflow.zip
